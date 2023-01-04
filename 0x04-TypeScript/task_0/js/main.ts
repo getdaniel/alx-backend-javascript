@@ -5,23 +5,22 @@ export interface Student {
   location: string;
 }
 const studentA: Student = {
-  firstName: "Daniel",
-  lastName: "Shibabaw",
-  age: 25,
-  location: "Bahir Dar, Ethiopia",
+  firstName: "Harry",
+  lastName: "Yoon",
+  age: 22,
+  location: "Seoul, South Korea",
 };
 const studentB: Student = {
-  firstName: "Temesgen",
-  lastName: "Endalamaw",
-  age: 24,
-  location: "Addis Ababa, Ethiopia",
+  firstName: "Anjali",
+  lastName: "Prajapati",
+  age: 22,
+  location: "Lodz, Poland",
 };
 
 const studentsList: Array<Student> = [
   studentA,
   studentB,
 ];
-
 const styleSheet = `
   html {
     margin: 0;
@@ -49,11 +48,17 @@ const styleSheet = `
   td:hover {
     background: gainsboro;
   }
+
   td:nth-child(1) {
     text-align: center;
   }
 `;
 
+/**
+ * Displays information about students in a table.
+ * @param students The list of students to display.
+ * @author Bezaleel Olakunori <https://github.com/B3zaleel>
+ */
 export const displayStudents = (students: Array<Student>): void => {
   const table = document.createElement('table');
   const tableHead = document.createElement('thead');
@@ -79,4 +84,4 @@ displayStudents(studentsList);
 const styleSheetElement = document.createElement('style');
 styleSheetElement.innerHTML = styleSheet;
 document.head.insertAdjacentElement('beforeend', styleSheetElement);
-document.title = 'Two Students';
+document.title = 'Task 0';
