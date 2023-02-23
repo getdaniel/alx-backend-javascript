@@ -8,6 +8,4 @@ function getPaymentTokenFromAPI(success) {
   });
 }
 
-module.exports = {
-  getPaymentTokenFromAPI,
-};
+module.exports = { getPaymentTokenFromAPI };
