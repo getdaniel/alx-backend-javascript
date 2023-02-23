@@ -2,6 +2,8 @@ const express = require('express');
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (_req, res) => {
   res.send('Welcome to the payment system');
 });
@@ -22,7 +24,7 @@ app.get('/available_payments', (_req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  res.end(`Welcome ${req.body.userName}`);
+  res.send(`Welcome ${req.body.userName}`);
 });
 
 const server = app.listen(7865, () => {
