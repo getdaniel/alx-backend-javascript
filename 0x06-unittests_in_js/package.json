@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A project of unittests in js",
   "scripts": {
-    "test": "mocha"
+    "test": "node ./node_modules/mocha/bin/mocha"
   },
   "dependencies": {
     "assert": "^2.0.0"
