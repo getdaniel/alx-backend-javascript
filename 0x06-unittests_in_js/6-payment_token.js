@@ -1,11 +1,9 @@
 function getPaymentTokenFromAPI(success) {
-  return new Promise((resolve, reject) => {
-    if (success) {
-      resolve({ data: 'Successful response from the API' });
-    } else {
-      reject('Failed response from the API');
-    }
-  });
+  if (success) {
+    return Promise.resolve({ data: 'Successful response from the API' });
+  } else {
+    return Promise.resolve();
+  }
 }
 
 module.exports = { getPaymentTokenFromAPI };
