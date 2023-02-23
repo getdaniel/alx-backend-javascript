@@ -1,5 +1,5 @@
 const assert = require('assert');
-const calculateNumber = require('./0-calcul.js');
+const calculateNumber = require('./0-calcul');
 
 describe('calculateNumber', function() {
     it('Rounding two integer numbers',function() {
@@ -13,5 +13,8 @@ describe('calculateNumber', function() {
     });
     it('Rounding float numbers with both roundup', function() {
         assert.equal(calculateNumber(1.5, 3.7), 6);
+    });
+    it('Rounding float trailing numbers with both rounddown', function() {
+        assert.equal(calculateNumber(1.499999, 3.499999), 4);
     });
 });
